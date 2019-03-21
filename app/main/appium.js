@@ -379,7 +379,7 @@ function connectSaveEnv () {
   });
 }
 
-function connectServerErrorBackdoor () {
+export function connectServerErrorBackdoor () {
   ipcMain.on('appium-force-nodejs-error', () => {
     throw new Error('A NodeJS error was intentionally thrown');
   });
